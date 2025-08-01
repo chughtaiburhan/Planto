@@ -1,0 +1,28 @@
+{
+  "home": {
+    "title": "Home",
+    "href": "/"
+  },
+  "Plant Type": {
+    "title": "Plant Type",
+    "href": "",
+    "children": [
+      {
+        "title": "Indoor Plants",
+        "href": "/about/indoor"
+      },
+      {
+        "title": "Outdoor Plants",
+        "href": "/about/outdoor"
+      }
+    ]
+  },
+  "More": {
+    "title": "More",
+    "href": "/more"
+  },
+  "contact": {
+    "title": "Contact",
+    "href": "/contact"
+  }
+}
