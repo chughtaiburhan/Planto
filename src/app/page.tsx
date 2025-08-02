@@ -1,10 +1,13 @@
 import React, { FC } from 'react'
-import Navbar from './components/Navbar' 
+import Navbar from '@/app/components/Navbar' 
+import Home from '@/app/Home/page'
 const Page: FC = () => {
   return (
-    <div className="min-h-screen w-full bg-gradient-custom">
-      <Navbar />
-    </div>
+    <div className="pt-24 min-h-screen w-full bg-gradient-custom">
+  <Navbar />
+  <Home />
+</div>
+
   )
 }
 

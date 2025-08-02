@@ -1,7 +1,7 @@
 'use client';
 
 import Logo from './Logo';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import NavItem from '@/app/data/navItems.json';
 import { ShoppingCartIcon, Bars3Icon } from '@heroicons/react/24/outline';
 import NavDropdown from './NavDropdown'; // ✅ New Component 
@@ -15,10 +15,21 @@ type NavLink = {
 
 const Navbar: FC = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+ const [isScrolled, setIsScrolled] = useState(false);
 
+  useEffect(() => {
+    const onScroll = () :void=> {
+      setIsScrolled(window.scrollY > 20); // Add threshold if needed
+    };
+
+    window.addEventListener('scroll', onScroll);
+    return () :void=> window.removeEventListener('scroll', onScroll);
+  }, []);
   return (
-    <nav className="bg-transparent fixed w-full z-20 top-0 start-0">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className={`fixed w-full z-20 top-0 start-0 transition-colors duration-300 ${
+        isScrolled ? 'bg-black/20 backdrop-blur text-white drop-shadow' : 'bg-transparent'
+      }`}>
+      <div className="max-w-screen-xl flex flex-wrap items-center  justify-between mx-auto p-4">
         <Logo />
 
         {/* Icons (Cart + Menu) */}

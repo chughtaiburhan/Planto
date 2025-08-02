@@ -6,18 +6,12 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-}
-h1{
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-h2{
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-h3{
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+} 
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 .bg-gradient-custom {
   background: radial-gradient(
@@ -25,5 +19,7 @@ h3{
     #20281d 0%,       /* center */
     #1f271c 35%,      /* inner mid */
     #182015 100%      /* outer sides */
-  );
+  ); 
 }
+
+

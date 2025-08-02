@@ -31,7 +31,7 @@ const NavDropdown: FC<NavDropdownProps> = ({ navKey, item, openDropdown, setOpen
     <li className="relative">
       <div
         onClick={handleToggle}
-        className="flex items-center cursor-pointer py-2 px-3 rounded md:p-0 hover:text-gray-400 transition"
+        className="flex items-center cursor-pointer py-2 px-3 rounded md:p-0 text-gray-200 hover:text-white transition"
       >
         <Link href={item.href}>{item.title}</Link>
         {item.children && (
@@ -55,7 +55,7 @@ const NavDropdown: FC<NavDropdownProps> = ({ navKey, item, openDropdown, setOpen
                 <li key={idx}>
                   <Link
                     href={child.href}
-                    className="block px-4 py-2 text-sm text-black text-gray-700 hover:bg-gray-100 hover:text-gray-900 rounded"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 rounded"
                   >
                     {child.title}
                   </Link>

@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Planto",
-  description:
-    "A plant care application. Track your plants, get reminders, and learn how to care for them.",
+   title: "Planto",
+  description: "A plant care application. Track your plants, get reminders, and learn how to care for them.",
 };
 
 export default function RootLayout({
